@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wedding Of Jonathan & Khalisha</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#e8a0bf;
+    --secondary:#f8d7da;
+    --gold:#d4af37;
+    --white:#ffffff;
+    --dark:#444;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:var(--dark);
+    background:#fff9fb;
+    overflow-x:hidden;
+}
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+}
+
+h1,h2,h3{
+    font-family:'Playfair Display',serif;
+}
+
+.section-title{
+    text-align:center;
+    color:#c26a95;
+    margin-bottom:35px;
+    font-size:2.2rem;
+}
+
+.hero{
+    height:100vh;
+    background:linear-gradient(135deg,#fce4ec,#f8d7da);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-content{
+    z-index:2;
+}
+
+.hero h3{
+    letter-spacing:4px;
+    color:#8a5871;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:3rem;
+    color:#b54c7e;
+    margin-bottom:15px;
+}
+
+.hero p{
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#c26a95;
+    color:white;
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#a84c77;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.couple{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.person{
+    text-align:center;
+}
+
+.person h3{
+    color:#c26a95;
+    margin-bottom:10px;
+}
+
+.quote{
+    text-align:center;
+    font-style:italic;
+    line-height:1.8;
+}
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.box{
+    width:120px;
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.box span{
+    display:block;
+    font-size:2rem;
+    color:#c26a95;
+    font-weight:bold;
+}
+
+.event{
+    margin-bottom:30px;
+}
+
+.event h3{
+    color:#c26a95;
+    margin-bottom:10px;
+}
+
+.map-btn{
+    display:inline-block;
+    margin-top:15px;
+    background:#c26a95;
+    color:white;
+    padding:10px 18px;
+    border-radius:30px;
+    text-decoration:none;
+}
+
+.columns{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.columns ul{
+    padding-left:20px;
+}
+
+.columns li{
+    margin-bottom:10px;
+}
+
+.gift-box{
+    text-align:center;
+}
+
+.rekening{
+    background:#fff0f5;
+    padding:20px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.copy-btn{
+    margin-top:15px;
+    border:none;
+    background:#c26a95;
+    color:white;
+    padding:12px 20px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+input,textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+textarea{
+    min-height:120px;
+}
+
+.footer{
+    background:#f8d7da;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer h2{
+    color:#b54c7e;
+}
+
+.flower{
+    position:absolute;
+    top:-50px;
+    color:#f59bc3;
+    animation:fall linear infinite;
+    font-size:24px;
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+    }
+}
+
+@media(max-width:768px){
+    .couple,
+    .columns{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .box{
+        width:90px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div id="flowers"></div>
+
+<section class="hero">
+    <div class="hero-content">
+        <h3>THE WEDDING OF</h3>
+        <h1>Jonathan & Khalisha</h1>
+        <p>26 & 28 Juni 2026</p>
+        <a href="#couple" class="btn">Buka Undangan</a>
+    </div>
+</section>
+
+<section id="couple">
+    <div class="container">
+        <h2 class="section-title">Mempelai</h2>
+
+        <div class="couple">
+            <div class="card person">
+                <h3>Khalisha Khairunniswha</h3>
+                <p>Putri Kedua dari</p>
+                <p><strong>Bapak Ibrahim Nur B. Aman, SH</strong></p>
+                <p>&</p>
+                <p><strong>Ibu Anggriani Bambang Sukowati</strong></p>
+            </div>
+
+            <div class="card person">
+                <h3>Jonathan Martala Syahputra</h3>
+                <p>Putra Keempat dari</p>
+                <p><strong>Bapak Alm. Mustamin</strong></p>
+                <p>&</p>
+                <p><strong>Ibu Trisnawati</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container card quote">
+        <h2 class="section-title">QS. Ar-Rum : 21</h2>
+        <p>
+        "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+        untukmu pasangan hidup dari jenismu sendiri supaya kamu merasa
+        tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang."
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">Countdown Menuju Akad</h2>
+
+        <div class="countdown">
+            <div class="box">
+                <span id="days">0</span>
+                Hari
+            </div>
+            <div class="box">
+                <span id="hours">0</span>
+                Jam
+            </div>
+            <div class="box">
+                <span id="minutes">0</span>
+                Menit
+            </div>
+            <div class="box">
+                <span id="seconds">0</span>
+                Detik
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Detail Acara</h2>
+
+<div class="card event">
+<h3>Akad Nikah</h3>
+<p>Jumat, 26 Juni 2026</p>
+<p>09.00 WITA - Selesai</p>
+<p>Jl. Masjid Al Alam, Kec. Kambu, Kota Kendari, Sulawesi Tenggara</p>
+<a class="map-btn" target="_blank"
+href="https://maps.app.goo.gl/dZzXqAy91KBVwjwU7">
+Lihat Lokasi
+</a>
+</div>
+
+<div class="card event">
+<h3>Resepsi Pernikahan</h3>
+<p>Minggu, 28 Juni 2026</p>
+<p>19.00 WITA - Selesai</p>
+<p>Jl. Edi Sabara No.89, Lahundape, Kec. Kendari Barat,
+Kota Kendari, Sulawesi Tenggara</p>
+<a class="map-btn" target="_blank"
+href="https://maps.app.goo.gl/weQZdzixiAN7s28SA">
+Lihat Lokasi
+</a>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Turut Mengundang</h2>
+
+<div class="columns">
+
+<div class="card">
+<h3>Pihak Perempuan</h3>
+<ul>
+<li>Bapak Herman Suparman</li>
+<li>Prof. Dr. H. Hanna, M.Pd</li>
+<li>Drs. Abd. Rachman, SH., MH</li>
+<li>Abd. Azis, M</li>
+<li>Amir</li>
+<li>Drs. Bambang Andi Acang</li>
+<li>dr. H. M. Agus S. Lahida, MMR</li>
+<li>Achmad, SH</li>
+<li>Halim Suparman</li>
+<li>Andi Ahmad Acang S, AN</li>
+<li>Nasaruddin Saud, S.Sos</li>
+<li>Jafar B. Aman, S.Psi</li>
+<li>Kunto Wibisono, SH</li>
+<li>Muh. Raul Dhaifi B. Aman, SH</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Pihak Laki-Laki</h3>
+<ul>
+<li>M. Ismail Muin</li>
+<li>Purn. Pelda Lahanisi</li>
+<li>Amiruddin, S.IP</li>
+<li>Idulhan</li>
+<li>Jordi Syahputra</li>
+<li>Ld. Rusdiin</li>
+<li>Baharuddin A.</li>
+<li>La Ode Azhar, ST</li>
+<li>Bahtiar Fatiha</li>
+</ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Wedding Gift</h2>
+
+<div class="card gift-box">
+<p>Doa restu Anda merupakan hadiah terindah bagi kami.</p>
+
+<div class="rekening">
+<h3>Bank BNI</h3>
+<p><strong>3001300003</strong></p>
+<p>a.n. Ibrahim Nur</p>
+
+<button class="copy-btn"
+onclick="copyRekening()">
+Salin Nomor Rekening
+</button>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2 class="section-title">Ucapan & Doa</h2>
+
+<div class="card">
+<div class="form-group">
+<input type="text" placeholder="Nama Anda">
+</div>
+
+<div class="form-group">
+<textarea placeholder="Tuliskan ucapan dan doa terbaik..."></textarea>
+</div>
+
+<button class="copy-btn">
+Kirim
+</button>
+</div>
+</div>
+</section>
+
+<footer class="footer">
+<h2>Terima Kasih</h2>
+
+<p>
+Merupakan suatu kehormatan dan kebahagiaan bagi kami
+apabila Bapak/Ibu/Saudara/i berkenan hadir dan
+memberikan doa restu.
+</p>
+
+<br>
+
+<h3>
+Jonathan Martala Syahputra
+<br>&<br>
+Khalisha Khairunniswha
+</h3>
+
+<br>
+
+<p>© 2026 - anhocoddo23</p>
+</footer>
+
+<script>
+
+const targetDate = new Date("June 26, 2026 09:00:00").getTime();
+
+setInterval(() => {
+
+const now = new Date().getTime();
+const distance = targetDate - now;
+
+const days = Math.floor(distance / (1000*60*60*24));
+const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+const minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+const seconds = Math.floor((distance % (1000*60)) / 1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+function copyRekening(){
+navigator.clipboard.writeText("3001300003");
+alert("Nomor rekening berhasil disalin");
+}
+
+function createFlower(){
+const flower = document.createElement("div");
+flower.classList.add("flower");
+flower.innerHTML = "🌸";
+
+flower.style.left = Math.random()*100 + "vw";
+flower.style.animationDuration =
+(Math.random()*5 + 5) + "s";
+
+document.body.appendChild(flower);
+
+setTimeout(()=>{
+flower.remove();
+},10000);
+}
+
+setInterval(createFlower,500);
+
+</script>
+
+</body>
+</html>
