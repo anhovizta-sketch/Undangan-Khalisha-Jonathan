@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<div id="youtube-container" style="display:none;">
+    <iframe
+        id="youtubePlayer"
+        width="0"
+        height="0"
+        src="https://www.youtube.com/embed/nScV1qu-MZQ?enablejsapi=1&autoplay=0&loop=1&playlist=nScV1qu-MZQ"
+        frameborder="0"
+        allow="autoplay">
+    </iframe>
+</div>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
@@ -274,7 +284,9 @@ textarea{
         <h3>THE WEDDING OF</h3>
         <h1>Jonathan & Khalisha</h1>
         <p>26 & 28 Juni 2026</p>
-        <a href="#couple" class="btn">Buka Undangan</a>
+        <a href="#couple" class="btn" onclick="playMusic()">
+    Buka Undangan
+</a>
     </div>
 </section>
 
